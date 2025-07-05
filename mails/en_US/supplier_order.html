@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Message from {shop_name}</title>
+    <style>
+        @media only screen and (max-width: 300px) {
+            body {
+                width: 218px !important;
+                margin: auto !important;
+            }
+            .table {
+                width: 195px !important;
+                margin: auto !important;
+            }
+        }
+        
+        @media only screen and (min-width: 301px) and (max-width: 500px) {
+            body {
+                width: 308px !important;
+                margin: auto !important;
+            }
+            .table {
+                width: 285px !important;
+                margin: auto !important;
+            }
+        }
+        
+        @media only screen and (min-width: 501px) and (max-width: 768px) {
+            body {
+                width: 478px !important;
+                margin: auto !important;
+            }
+            .table {
+                width: 450px !important;
+                margin: auto !important;
+            }
+        }
+        
+        @media only screen and (min-device-width: 1025px) {
+            body {
+                width: 600px !important;
+                margin: auto !important;
+            }
+            .table {
+                width: 570px !important;
+                margin: auto !important;
+            }
+        }
+        
+        body {
+            font-family: 'Open-sans', sans-serif;
+            font-size: 14px;
+            color: #555454;
+            line-height: 22px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #337ff1;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table class="table" style="width: 100%; margin: 0; padding: 0; background-color: #ffffff; color: #555454;">
+        <tr>
+            <td style="padding: 20px; border-bottom: 1px solid #f2f2f2;">
+                <h1 style="margin: 0; padding: 0; font-size: 24px; font-weight: normal; color: #333333;">Supplier Order #{order_id}</h1>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 20px;">
+                <p style="margin: 0 0 15px 0;">Dear {supplier_name},</p>
+                <p style="margin: 0 0 15px 0;">Please find attached our purchase order #{order_id} dated {order_date}.</p>
+                <p style="margin: 0 0 15px 0;">The total amount of this order is {total_amount}.</p>
+                <p style="margin: 0 0 15px 0;">Please process this order as soon as possible according to our agreed terms.</p>
+                <p style="margin: 0 0 15px 0;">If you have any questions regarding this order, please contact us.</p>
+                <p style="margin: 0 0 15px 0;">Best regards,</p>
+                <p style="margin: 0 0 15px 0;">The {shop_name} team</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 20px; border-top: 1px solid #f2f2f2; text-align: center; font-size: 12px; color: #999999;">
+                <p style="margin: 0 0 15px 0;">&copy; {shop_name}</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

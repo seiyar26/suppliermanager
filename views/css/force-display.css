@@ -1,0 +1,100 @@
+/* OVERRIDE CRITIQUE - Style de priorité ABSOLUE pour forcer l'affichage */
+/* Ce CSS utilise !important sur tout pour contourner les styles existants */
+
+/* Force l'affichage de TOUS les éléments de contenu potentiel */
+body .tab-content,
+body .tab-content.active,
+body .content-wrapper,
+body .page-content,
+body .content-div,
+body .panel-content,
+body .main-content,
+body .central-column,
+body #content,
+body #tab-content,
+body .card-content,
+body .panel-body,
+body .bootstrap .tab-pane,
+body .bootstrap .tab-pane.active,
+body .tab-pane,
+body .tab-pane.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 50px !important;
+    overflow: visible !important;
+    position: static !important;
+    transform: none !important;
+    z-index: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* S'assure que les conteneurs s'affichent aussi */
+body .bootstrap,
+body .bootstrap .panel,
+body .bootstrap .card,
+body .bootstrap .tab-container,
+body .panel,
+body .card,
+body .tab-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+}
+
+/* Réinitialisation des propriétés qui pourraient cacher le contenu */
+body * {
+    transition: none !important; /* Désactive les transitions */
+}
+
+/* Hack pour forcer Chrome et Safari à redessiner les éléments */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    body .tab-content.active,
+    body .bootstrap .tab-pane.active,
+    body .tab-pane.active {
+        -webkit-transform: translateZ(0) !important;
+        transform: translateZ(0) !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+        -webkit-perspective: 1000px !important;
+        perspective: 1000px !important;
+    }
+}
+
+/* Hack spécifique pour Firefox */
+@-moz-document url-prefix() {
+    body .tab-content.active,
+    body .bootstrap .tab-pane.active,
+    body .tab-pane.active {
+        display: block !important;
+    }
+}
+
+/* Hack pour IE/Edge */
+@supports (-ms-ime-align:auto) {
+    body .tab-content.active,
+    body .bootstrap .tab-pane.active,
+    body .tab-pane.active {
+        display: block !important;
+    }
+}
+
+/* Classe d'urgence pour être appliquée via JS */
+.force-visible {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 50px !important;
+    position: static !important;
+    z-index: 9999 !important;
+    clip: auto !important;
+    clip-path: none !important;
+}
+
+/* Style de diagnostic - bordure rouge pour débugger */
+.debug-outline {
+    border: 2px solid red !important;
+}

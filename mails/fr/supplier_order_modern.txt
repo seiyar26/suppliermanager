@@ -1,0 +1,16 @@
+Bonjour {supplier_name},
+
+Veuillez trouver ci-dessous les détails de notre nouvelle commande numéro #{order_id}, datée du {order_date}.
+
+{order_details_txt}
+
+Le montant total de cette commande est de {total_amount}.
+
+Merci de traiter cette commande dans les plus brefs délais conformément à nos conditions convenues.
+
+Si vous avez des questions, n'hésitez pas à nous contacter.
+
+Cordialement,
+L'équipe {shop_name}
+
+© {current_year} {shop_name}. Tous droits réservés.

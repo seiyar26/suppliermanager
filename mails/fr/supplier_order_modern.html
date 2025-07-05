@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande Fournisseur #{order_id}</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .content {
+            padding: 40px;
+            color: #555555;
+            line-height: 1.6;
+        }
+        .content p {
+            margin: 0 0 20px 0;
+        }
+        .order-details {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        .order-details th, .order-details td {
+            border: 1px solid #dddddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .order-details th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #f4f4f4;
+            color: #888888;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Nouvelle Commande Fournisseur</h1>
+        </div>
+        <div class="content">
+            <p>Bonjour {supplier_name},</p>
+            <p>Veuillez trouver ci-dessous les détails de notre nouvelle commande numéro <strong>#{order_id}</strong>, datée du {order_date}.</p>
+            
+            <table class="order-details">
+                <thead>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Quantité</th>
+                        <th>Prix Unitaire</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {order_details}
+                </tbody>
+            </table>
+
+            <p>Le montant total de cette commande est de <strong>{total_amount}</strong>.</p>
+            <p>Merci de traiter cette commande dans les plus brefs délais conformément à nos conditions convenues.</p>
+            <p>Si vous avez des questions, n'hésitez pas à nous contacter.</p>
+            <p>Cordialement,</p>
+            <p><strong>L'équipe {shop_name}</strong></p>
+        </div>
+        <div class="footer">
+            <p>&copy; {current_year} {shop_name}. Tous droits réservés.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Supplier Order #{order_id}
+
+Dear {supplier_name},
+
+Please find attached our purchase order #{order_id} dated {order_date}.
+
+The total amount of this order is {total_amount}.
+
+Please process this order as soon as possible according to our agreed terms.
+
+If you have any questions regarding this order, please contact us.
+
+Best regards,
+The {shop_name} team

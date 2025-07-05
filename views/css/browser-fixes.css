@@ -1,0 +1,77 @@
+/* Fichier de correction pour la compatibilité entre navigateurs */
+
+/* Correction principale pour l'affichage des contenus */
+.tab-content.active {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Préfixes vendeurs pour la transition et l'animation */
+.tab-content {
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+/* Fixes pour Webkit (Chrome, Safari) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .tab-content.active {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    .bootstrap .tab-container {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+/* Correction pour Firefox */
+@-moz-document url-prefix() {
+    .tab-content.active {
+        display: block;
+    }
+}
+
+/* Correction pour IE/Edge */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .tab-content.active {
+        display: block;
+    }
+}
+
+/* Correctifs généraux de mise en page */
+.card-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.kpi-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* Correctif de visibilité forcée */
+.visible-all-browsers {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Fix pour le problème de colonne centrale */
+.page-content,
+.content-wrap,
+.main-content {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
